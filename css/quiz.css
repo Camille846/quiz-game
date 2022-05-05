@@ -1,0 +1,117 @@
+@import 'reset.css';
+
+*{
+    font-family: var(--quiz-font);
+    font-weight: 500;
+}
+
+:root{
+    --neutral: hsl(338, 32%, 76%);
+    --wrong:rgb(199, 65, 65);
+    --correct:hsla(129, 42%, 55%, 1);
+}
+
+body{
+    --hue: var(--hue-neutral);
+    /* height: 100vh; */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neutral);
+    color: var(--text-color);
+    font-family: var(--quiz-font);
+    font-weight: 500;
+    color: var(--text-color);
+    overflow: hidden;
+    transition: background .8s;
+}
+
+body.correct{
+    background-color: var(--correct);   
+}
+
+body.wrong{
+    background-color: var(--wrong);
+}
+
+.quiz__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    max-width: 80%;
+    margin: auto;
+    font-family: var(--quiz-font);
+    background-color: hsl(340, 3%, 81%);
+    border-radius: 15px;
+    box-shadow: 0 0 5px 1px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.quiz__title{
+    margin-bottom: var(--mb-1);
+    text-align: center;
+}
+
+#question-container{
+    width: 500px;
+    max-width: 80%;
+}
+
+.quiz__container #question{
+    font-size: var(--h2-font-size);
+}
+
+.btn{
+    cursor: pointer;
+    background-color: var(--neutral);
+    border: 1px solid hsl(338, 32%, 56%);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: background .5s;
+}
+
+.btn:hover{
+    background-color: hsl(338, 28%, 60%);
+    border: 1px solid hsl(338, 34%, 53%);
+}
+
+.btn.correct {
+    background-color: var(--correct);
+    border: 1px solid rgb(45, 102, 55);
+    font-weight: 800;
+}
+
+.btn.wrong {
+    background-color: var(--wrong);
+    border: 1px solid rgb(201, 25, 25);
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 1rem;
+    margin: 20px 0;
+}
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    align-items: center;
+    margin-top: var(--mb-1);
+}
+
+.start-btn, .next-btn{
+    padding: 1rem;
+    width: 140px;
+    text-align: center;
+    font-size: var(--h2-font-size);
+}
+
+.hide{
+    display: none;
+}

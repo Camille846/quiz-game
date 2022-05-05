@@ -1,0 +1,123 @@
+.header{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: var(--z-fixed);
+    background-color: #a84f67;
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.nav__logo, .nav__toggle{
+    color: var(--white-color);
+}
+
+.nav__logo{
+    font-weight:var(--font-semi-bold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.nav__toggle{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav__menu{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:767px){
+    .nav__menu{
+        position: fixed;
+        background-color: var(--body-color);
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        box-shadow: -1px 0 4px hsla(var(--hue-color), 100%, 37%, .15);
+        padding: 3rem;
+        transition: .4s;
+    }
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.nav__link{
+    color:var(--title-color);
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+}
+
+.nav__link:hover{
+    color: var(--first-color);
+}
+
+.nav__close{
+    position: absolute;
+    top:.75rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.show-menu{
+    right: 0;
+}
+
+@media screen and (min-width:768px){
+    body{
+        margin: 0;
+    }
+
+    .nav{
+        height: calc(var(--header-height) + 1.5rem);
+
+    }
+
+    .nav__link{
+        color:var(--white-color);
+        text-transform: initial;
+    }
+
+    .nav__list{
+        flex-direction: row;
+        column-gap: 4rem;
+    }
+
+    .nav__toggle, .nav__close{
+        display: none;
+    }
+
+    .nav__link:hover{
+        color:var(--white-color);
+    }
+}
+
+@media screen and (min-width:1024px){
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .container{
+        max-width: 1024px;
+    }
+}
