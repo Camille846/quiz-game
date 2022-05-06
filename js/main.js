@@ -30,3 +30,54 @@ function linkAction(){
 }
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+const moreBtnOne = document.getElementById('m01');
+const moreBtnTwo = document.getElementById('m02'); 
+const moreBtnThree = document.getElementById('m03');
+const moreBtnFour = document.getElementById('m04');
+const moreBtnFive = document.getElementById('m05');
+const moreBtnSix = document.getElementById('m06');
+const moreBtnSeven = document.getElementById('m07');
+const moreBtnEight = document.getElementById('m08');
+const moreBtnNine = document.getElementById('m09');
+const moreBtnTen = document.getElementById('m10');
+
+moreBtnOne.addEventListener("click", ()=>{
+    window.open("metodo01.html");
+})
+
+moreBtnTwo.addEventListener("click", ()=>{
+    window.open("metodo02.html");
+})
+
+moreBtnThree.addEventListener("click", ()=>{
+    window.open("metodo03.html");
+})
+
+moreBtnFour.addEventListener("click", ()=>{
+    window.open("metodo04.html");
+})
+
+moreBtnFive.addEventListener("click", ()=>{
+    window.open("metodo05.html");
+})
+
+moreBtnSix.addEventListener("click", ()=>{
+    window.open("metodo06.html");
+})
+
+moreBtnSeven.addEventListener("click", ()=>{
+    window.open("metodo07.html");
+})
+
+moreBtnEight.addEventListener("click", ()=>{
+    window.open("metodo08.html");
+})
+
+moreBtnNine.addEventListener("click", ()=>{
+    window.open("metodo09.html");
+})
+
+moreBtnTen.addEventListener("click", ()=>{
+    window.open("metodo10.html");
+})
