@@ -1,0 +1,46 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+    background-color: #f1becb;
+}
+
+.howto_box{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #a33351;
+    border-radius: 8px;
+    margin-top: var(--mb-2);
+    margin-bottom: var(--mb-2);
+    background-color: #d6d2d3;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.box_title{
+    padding-top: var(--mb-1);
+}
+
+.guide_box{
+    display: flex;
+    flex-direction: column;
+}
+
+.step{
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid  #a51f43;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    white-space: wrap;
+}
+
+.ref{
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: var(--mb-1);
+}
