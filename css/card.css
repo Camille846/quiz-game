@@ -1,0 +1,60 @@
+.metodo_card{
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .625rem;
+
+}
+
+.metodo_card .card-item{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--mb-2);
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.eficacia-title{
+    font-weight: 700;
+}
+
+.card-button{
+    background-color: #a84f67;
+    border-radius: 15px;
+    padding: .5rem 0;
+    width: 100%;
+    cursor: pointer;
+    transition: background .5s;
+}
+
+.more-btn{
+    background-color: transparent;
+    color: var(--white-color);
+    font-weight: var(--font-bold);
+}
+
+.card-button:hover{
+    background-color: #a33351;
+}
+
+.card-button:hover .more-btn{
+    font-weight: 800;
+}
+
+
+@media screen and (min-width:768px){
+    .metodo_card{
+        display: grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:1rem;
+    }
+
+    .metodo_card .card-item:nth-child(9){
+        grid-column: 2;
+    }
+}
