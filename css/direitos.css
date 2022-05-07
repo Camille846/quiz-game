@@ -1,0 +1,50 @@
+.direitos-title{
+    margin-bottom: var(--mb-1);
+}
+
+.direitos-subtitle{
+    text-align: center;
+    margin-bottom: var(--mb-1);
+}
+
+.direitos-card{
+    margin-top: var(--mb-1-5);
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.dir-box_title{
+    margin-bottom: var(--mb-1);
+    text-align: center;
+}
+
+.dir-content{
+    border: 1px solid #a33351;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.dir-list li::before{
+    content: '>';
+    padding: 5px;
+    font-weight: 700;
+    color: #aa0d37;
+}
+
+.dir-list li{
+    padding-bottom: 10px;
+}
+
+@media screen and (min-width:768px){
+    .direitos-card{
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+        gap: 2rem;
+        height: 500px;
+    }
+
+    .dir-content{
+        height: 450px;
+    }
+}
