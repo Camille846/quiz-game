@@ -1,128 +1,120 @@
-let shuffleQuestions, currentQuestionIndex;
-let counter = 0;
+const question = document.getElementById("question");
+const choices = Array.from(document.getElementsByClassName("choice-text"));
+const questionCounterText = document.getElementById("question-counter");
+const scoreText = document.getElementById("score");
 
-const questions = [
+let currentQuestion = {};
+let acceptingAnswers = false;
+let score = 0;
+let questionCounter = 0;
+let availableQuestions = [];
+
+let questions = [
     {
-        question: 'consectetur adipiscing elit?',
-        answers: [
-            { text:'2A', correct: true },
-            { text:'4A', correct: false }, 
-            { text:'8A', correct: false }, 
-            { text:'10A', correct: false }
-        ]
+        question: "São direitos reprodutivos, EXCETO:",
+        choice1: "Direito de exercer a sexualidade e a reprodução livre de discriminação",
+        choice2: "Direito à informação, aos meios, métodos e técnicas para ter ou não filhos",
+        choice3: "Direito ao sexo seguro para prevenção da gravidez indesejada e das DST/HIV.",
+        choice4: "Direito de decidir livre e responsavelmente sobre o número, o espaçamento e se quer ou não ter filhos",
+        answer: 3
     },
     {
-        question: 'sed do eiusmod tempor incididunt?',
-        answers: [
-            { text:'12B', correct: true }, 
-            { text:'14B', correct: false }, 
-            { text:'16B', correct: false }, 
-            { text:'18B', correct: false }
-        ]
+        question: "Com relação a contracepção e adolescência, qual alternativa abaixo representa um método recomendado a adolescentes?",
+        choice1: "Implantes",
+        choice2: "Injetáveis ",
+        choice3: "D.I.U",
+        choice4: "Preservativo",
+        answer: 4
     },
     {
-        question: 'ut labore et dolore magna aliqua?',
-        answers: [
-            { text:'20C', correct: true }, 
-            { text:'22C', correct: false }, 
-            { text:'24C', correct: false }, 
-            { text:'26C', correct: false }
-        ]
+        question: "São princípios éticos orientadores das práticas profissionais no planejamento familiar, exceto:",
+        choice1: "Respeito aos direitos e á autonomia sexual e reprodutiva de todos os sujeitos",
+        choice2: "Promoção da iniquidade de gênero, equidade ético-racial e da injustiça social",
+        choice3: "Diversidade e respeito às diferenças culturais, de estilo de vida, de orientação sexual e outras",
+        choice4: "Integralidade e humanização como princípios das práticas de saúde e organização dos processos de trabalho",
+        answer: 2
     },
     {
-        question: 'quis nostrud exercitation ullamco?',
-        answers: [
-            { text:'28D', correct: true }, 
-            { text:'30D', correct: false }, 
-            { text:'32D', correct: false }, 
-            { text:'34D', correct: false }
-        ]
+        question: "Com relação a prevenção de Infecções Sexualmente Transmissíveis, qual alternativa abaixo representa um método eficaz?",
+        choice1: "D.I.U",
+        choice2: "Diafragma",
+        choice3: "Preservativos femininos e masculinos",
+        choice4: "Anel vaginal",
+        answer: 3
     },
-    
-]
+    {
+        question: "O que é planejamento familiar? ",
+        choice1: "Conjunto de ações que possibilitam à pessoa escolher livre e responsavelmente sobre o número, o espaçamento e se quer ou não ter filhos.",
+        choice2: "Conjunto de ações que possibilitam a identificação das necessidades de saúde do Idoso nem sempre valorizadas",
+        choice3: "Conjunto de ações referentes ao controle de natalidade com a intenção de diminuir ou aumentar a população",
+        choice4: "Conjunto de ações que possibilitam práticas políticas voltadas a legalização do aborto.",
+        answer: 1
+    }
+];
 
-const quiz = document.querySelector(".quiz__container");
-const questionContainer = document.getElementById("question-container");
-const questionElement = document.getElementById("question");
-const answerBtn = document.getElementById("answers-btn");
-const startBtn = document.getElementById("start-btn");
-const nextBtn = document.getElementById("next-btn");
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 5;
 
-startBtn.addEventListener("click", startGame);
-nextBtn.addEventListener("click", () =>{
-    currentQuestionIndex++;
-    setNextQuestion();
-});
-
-function startGame(){
-    startBtn.classList.add("hide");
-    questionContainer.classList.remove("hide");
-    nextBtn.classList.remove("hide");
-    shuffleQuestions = questions.sort(() => Math.random() - .5);
-    currentQuestionIndex = 0;
-    setNextQuestion()
+startGame = () =>{
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    // console.log(availableQuestions);
+    getNewQuestion();
 }
 
-function setNextQuestion(){
-    resetState()
-    showQuestion(shuffleQuestions[currentQuestionIndex]);
-}
 
-function showQuestion(question){
-    questionElement.innerText = question.question;
-    question.answers.forEach(answer => {
-        const button = document.createElement("button")
-        button.innerText = answer.text;
-        button.classList.add('btn');
+getNewQuestion = () => {
 
-        if(answer.correct){
-            button.dataset.correct = answer.correct;
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        return window.location.assign('/end.html');
+    }
+
+    questionCounter++;
+    questionCounterText.innerText = questionCounter + ' / ' + MAX_QUESTIONS;
+
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
+
+
+    choices.forEach( choice => {
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+    });
+
+    availableQuestions.splice(questionIndex, 1);
+    acceptingAnswers = true;
+};
+
+choices.forEach( choice => {
+    choice.addEventListener('click', e =>{
+        if(!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+
+        let classToApply = 'incorrect';
+        if (selectedAnswer == currentQuestion.answer) {
+            classToApply = 'correct';
         }
 
-        button.addEventListener('click', selectAnswer)
-        answerBtn.appendChild(button);
+        if (classToApply === 'correct') {
+            incrementScore(CORRECT_BONUS);
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply);
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 3000);
     });
-}
+});
 
-function resetState(){
-    clearStatusClass(document.body);
-    nextBtn.classList.add('hide')
-    while (answerBtn.firstChild) {
-        answerBtn.removeChild(answerBtn.firstChild)
-    }
-}
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+};
 
-function selectAnswer(e){
-    const selectedBtn = e.target;
-    const correct = selectedBtn.dataset.correct;
-
-    setStatusClass(document.body, correct);
-    Array.from(answerBtn.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
-
-    if (shuffleQuestions.length > currentQuestionIndex + 1) {
-        nextBtn.classList.remove("hide");
-    } else{
-        clearStatusClass(document.body);
-        startBtn.classList.remove("hide");
-        startBtn.innerText = "Refazer";
-        questionContainer.innerHTML = '<h2 class="score"> Você acertou ' + counter + ' de ' + (questions.length) + ' questões.</h2>';
-    }
-
-}
-
-function setStatusClass(element, correct){
-    clearStatusClass(element);
-    if(correct){
-        element.classList.add('correct');
-        counter++;
-    } else{
-        element.classList.add('wrong');
-    }
-}
-
-function clearStatusClass(element){
-    element.classList.remove('correct');
-    element.classList.remove('wrong');
-}
+startGame();
