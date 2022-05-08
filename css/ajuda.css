@@ -1,0 +1,53 @@
+.ajuda{
+    display: flex;
+    flex-direction: column;
+}
+
+.ajuda-box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.ajuda-content{
+    border: 1px solid #a33351;
+    border-radius: 15px;
+    margin-top: var(--mb-1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ajuda-text{
+    text-align: center;
+    padding: 1rem;
+}
+
+.ajuda-img{
+    width: 300px;
+}
+
+.logo-sus{
+    width: 100%;
+}
+
+@media screen and (min-width:768px){
+    .ajuda-title{
+        text-align: left;
+    }
+
+    .ajuda-content{
+        width: 500px;
+    }
+
+    .ajuda-box{
+        display: flex;
+        flex-direction: row;
+        column-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+}
