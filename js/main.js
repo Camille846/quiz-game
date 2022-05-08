@@ -94,8 +94,9 @@ sr.reveal('.home-title, .home-card, .metodo-title, .metodo_card, .direitos-title
     interval: 100,
 })
 
-sr.reveal('.dir-box1',{
+sr.reveal('.dir-box1, .dir-ref',{
     origin:'left',
+    interval: 100,
 })
 
 
