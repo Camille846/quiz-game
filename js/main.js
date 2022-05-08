@@ -81,3 +81,25 @@ moreBtnNine.addEventListener("click", ()=>{
 moreBtnTen.addEventListener("click", ()=>{
     window.open("metodo10.html");
 })
+
+// SCROLL REVEAL ANIMATION  
+const sr = ScrollReveal({
+    distance:'60px',
+    duration:2800,
+    // reset: true,
+})
+
+sr.reveal('.home-title, .home-card, .metodo-title, .metodo_card, .direitos-title, .direitos-subtitle, .card-content, .ajuda-title, .ajuda-box, .footer',{
+    origin:'top',
+    interval: 100,
+})
+
+sr.reveal('.dir-box1',{
+    origin:'left',
+})
+
+
+sr.reveal('.dir-box2',{
+    origin:'right',
+    interval: 100,
+})
