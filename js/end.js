@@ -14,6 +14,14 @@ username.addEventListener("keyup", () =>{
     saveScoreBtn.disabled = !username.value;
 })
 
+const formBtn = document.querySelector(".enviar-btn");
+// const post = document.querySelector(".post");
+// const starWidget = document.querySelector(".star-widget");
+
+formBtn.addEventListener("click", () =>{
+    window.location.assign('/index.html');
+})
+
 saveHighScore = (e) =>{
     e.preventDefault();
     console.log("clicked")
@@ -30,6 +38,6 @@ saveHighScore = (e) =>{
 
     // // console.log(highscores);
     // localStorage.setItem("highscores", JSON.stringify(highscores));
-
-
 }
+
+// Rate
