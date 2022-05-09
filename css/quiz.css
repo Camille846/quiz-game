@@ -106,3 +106,33 @@ h1, h2, h3, h4{
     transform: none;
 }
 
+#final-score{
+    font-size: 5rem;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 1px #a2435c;
+}
+
+.save-btn{
+    font-weight: 600;
+}
+
+.final-btn{
+    font-size: 1rem;
+    padding: 1rem 0;
+    width: 10rem;
+    text-align: center;
+    border: .1rem solid #a33351;
+    border-radius: 10px;
+    margin-bottom: var(--mb-1);
+    text-decoration: none;
+    color: #a33351;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background .5s;
+}
+
+.final-btn:hover{
+    background-color:#af6377 ;
+    color: #fff;
+    box-shadow: 0 .4rem 1rem 0 rgba(163, 51, 81, .5);
+}
