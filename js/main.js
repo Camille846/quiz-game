@@ -85,22 +85,22 @@ moreBtnTen.addEventListener("click", ()=>{
 // SCROLL REVEAL ANIMATION  
 const sr = ScrollReveal({
     distance:'60px',
-    duration:2800,
+    duration:2000,
     // reset: true,
 })
 
 sr.reveal('.home-title, .home-card, .metodo-title, .metodo_card, .direitos-title, .direitos-subtitle, .card-content, .ajuda-title, .ajuda-box, .footer',{
     origin:'top',
-    interval: 100,
+    interval: .500,
 })
 
 sr.reveal('.dir-box1, .dir-ref',{
     origin:'left',
-    interval: 100,
+    interval: .500,
 })
 
 
 sr.reveal('.dir-box2',{
     origin:'right',
-    interval: 100,
+    interval: .500,
 })
