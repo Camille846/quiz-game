@@ -23,7 +23,7 @@ let questions = [
         choice1: "Implantes",
         choice2: "Injetáveis ",
         choice3: "D.I.U",
-        choice4: "Preservativo",
+        choice4: "Preservativos e pílulas",
         answer: 4
     },
     {
@@ -67,6 +67,7 @@ startGame = () =>{
 getNewQuestion = () => {
 
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score);
         return window.location.assign('/end.html');
     }
 
@@ -108,7 +109,7 @@ choices.forEach( choice => {
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
-        }, 3000);
+        }, 2500);
     });
 });
 
