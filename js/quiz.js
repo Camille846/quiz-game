@@ -14,7 +14,7 @@ let questions = [
         question: "São direitos reprodutivos, EXCETO:",
         choice1: "Direito de exercer a sexualidade e a reprodução livre de discriminação",
         choice2: "Direito à informação, aos meios, métodos e técnicas para ter ou não filhos",
-        choice3: "Direito ao sexo seguro para prevenção da gravidez indesejada e das DST/HIV.",
+        choice3: "Direito ao sexo seguro para prevenção da gravidez indesejada e das ISTs.",
         choice4: "Direito de decidir livre e responsavelmente sobre o número, o espaçamento e se quer ou não ter filhos",
         answer: 3
     },
