@@ -11,7 +11,7 @@
 <body>
     <div class="quiz_container">
         <div id="end" class="flex-center flex-column">
-            <h1>Sua pontuação final é:</h1>
+            <h1 class="end-title">Sua pontuação final é:</h1>
             <h1 id="final-score"></h1>
             <div class="end-btns">
                 <a href="/quiz.html" class="replay-btn final-btn">Jogar novamente</a>
@@ -30,7 +30,6 @@
                     <input type="radio" name="rate" id="rate-4">
                     <label for="rate-4" id="labelA">
                         <a class="fa-solid fa-star"></a>
-
                     </label>
                     <input type="radio" name="rate" id="rate-3">
                     <label for="rate-3">
@@ -48,6 +47,8 @@
             </div>
             <form action="#" class="textarea-form">
                 <header class="textarea-header"></header>
+                <input type="text" name="nome" id="textarea-nome" class="textarea-input" autocomplete="off">Coloque seu nome aqui ⬆️
+                <input type="email" name="email" id="textarea-email" class="textarea-input" autocomplete="off">Coloque seu e-mail aqui ⬆️
                 <div class="textarea">
                     <textarea cols="12" placeholder="Descreva sua experiência"></textarea>
                 </div>

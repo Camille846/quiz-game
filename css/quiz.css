@@ -106,6 +106,17 @@ h1, h2, h3, h4{
     transform: none;
 }
 
+#end{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.end-title{
+    margin-top: 5rem;
+}
+
 #final-score{
     font-size: 5rem;
     font-family: 'Open Sans', sans-serif;
@@ -232,6 +243,7 @@ input#rate-5:checked ~ form header:before{
     text-align: center;
     margin-top: 1rem;
     gap: 1rem;
+    font-size: .7rem;
 }
 
 .textarea-form header{
@@ -257,4 +269,14 @@ input#rate-5:checked ~ form header:before{
 
 .textarea-form textarea::placeholder{
     color: rgba(38, 12, 19, .7);
+}
+
+.textarea-input{
+    width: 100%;
+    padding: .7rem;
+    border: 1px solid rgb(199, 65, 65);
+    border-radius: 7px;
+    font-size: 17px;
+    color: #631e30;
+    font-weight: 600;
 }
