@@ -22,6 +22,7 @@
 
 .box_title{
     padding-top: var(--mb-1);
+    text-align: center;
 }
 
 .guide_box{
