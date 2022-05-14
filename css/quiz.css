@@ -280,3 +280,16 @@ input#rate-5:checked ~ form header:before{
     color: #631e30;
     font-weight: 600;
 }
+
+.submit-content{
+    display: flex;
+    row-gap: 1rem;
+    text-align: center;
+}
+
+.thx-box{
+    padding: 4rem;
+    border: 2px solid #a2435c;
+    border-radius: 15px;
+    background-color: rgba(163, 51, 81, .1);
+}
