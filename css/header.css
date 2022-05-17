@@ -22,7 +22,7 @@
 }
 
 .nav__logo, .nav__toggle{
-    color: var(----text-color);
+    color: var(--text-color);
 }
 
 .nav__logo{
@@ -71,7 +71,7 @@
 }
 
 .nav__link:hover{
-    color: var(--first-color);
+    color: var(--hover-color);
 }
 
 .nav__close{
@@ -99,7 +99,7 @@
     }
 
     .nav__link{
-        color: var(----text-color);
+        color: var(--text-color);
         text-transform: initial;
     }
 
@@ -114,7 +114,7 @@
 
     .nav__link:hover{
         /* color:#ecd2d9; */
-        color: var(--second-color);
+        color: var(--hover-color);
     }
 }
 
@@ -214,7 +214,7 @@
 }
 
 .scroll-header .nav__logo:hover, .scroll-header .nav__toggle:hover, .scroll-header .nav__link:hover{
-    color:var(--title-color);
+    color:var(--hover-color);
 }
 
 @media screen and (min-width:768px){

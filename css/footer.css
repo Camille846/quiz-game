@@ -42,7 +42,7 @@
 }
 
 .footer__link:hover{
-    color:var(--title-color);
+    color:var(--hover-color);
 }
 
 .footer__rights{
@@ -64,7 +64,7 @@
 }
 
 .footer__terms-link:hover{
-    color: var(--text-color);
+    color: var(--hover-color);
 }
 
 @media screen and (min-width:768px){
