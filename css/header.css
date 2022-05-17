@@ -224,3 +224,7 @@
         text-align: center;
     }
 }
+
+.metodo-nav{
+    background-color: var(--white-color);
+}
