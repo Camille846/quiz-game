@@ -51,3 +51,22 @@
         justify-content: center;
     }
 }
+
+.principios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.principios-item{
+    padding-bottom: 10px;
+}
+
+.principios-list li::before{
+    content: '>';
+    padding: 5px;
+    font-weight: 700;
+    color: var(--hover-color);
+}
