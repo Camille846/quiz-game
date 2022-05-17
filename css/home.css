@@ -1,15 +1,15 @@
-.home{
+.inicio{
     margin-bottom: var(--mb-2);
 }
 
-.home-title{
+.inicio-title{
     margin-bottom: var(--mb-2);
     text-transform: uppercase;
     font-weight: var(--font-semi-bold);
     letter-spacing: 1px;
 }
 
-.home-card{
+.inicio-card{
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
@@ -18,30 +18,29 @@
 
 }
 
-.home-img{
+.inicio-img{
     width: 80%;
 }
 
-.home__picture{
+.inicio__picture{
     width: 100%;
 }
 
-.home-definition{
+.inicio-definition{
     line-height: 25px;
 }
 
 @media screen and (min-width:768px){
-    .home{
+    .inicio{
         margin-top: var(--mb-2);
         margin-bottom: var(--mb-2);
     }
-    .home-card{
+    .inicio-card{
         display: grid;
         grid-template-columns:repeat(2,2fr);
         gap:5rem;
     }
-    
-    .home-img{
+    .inicio-img{
         width: 100%;
     }
 }

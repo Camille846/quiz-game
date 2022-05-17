@@ -20,7 +20,7 @@
 }
 
 .dir-content{
-    border: 1px solid #a33351;
+    border: 1px solid var(--first-color);
     padding: 1rem;
     border-radius: 15px;
 }
@@ -29,7 +29,7 @@
     content: '>';
     padding: 5px;
     font-weight: 700;
-    color: #aa0d37;
+    color: var(--hover-color);
 }
 
 .dir-list li{

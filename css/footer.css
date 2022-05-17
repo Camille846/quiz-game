@@ -1,6 +1,6 @@
 .footer{
     border-top: 2px solid var(--first-color);
-    background-color: #fac4d3;;
+    background-color: var(--footer-color);
 }
 .footer__container{
     row-gap: 5rem;

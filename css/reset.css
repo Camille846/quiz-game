@@ -6,9 +6,8 @@
     --header-height:3rem;
 
     /* colors */
-    --exp-card: #f7e1e4;
+    /* --exp-card: #f7e1e4;
     --white-color: #fff;
-    --home-info: linear-gradient(120deg, #a4b997 0%, #152d2b 100%);
     --hue-color: 340;
     --first-color: hsl(var(--hue-color), 62%, 70%); 
     --first-color-alt: hsl(var(--hue-color), 42%, 73%);
@@ -20,7 +19,29 @@
     --input-color: hsl(var(--hue-color), 24%, 97%);
     --body-color:hsl(var(--hue-color), 100%, 99%);
     --scroll-bar-color:hsl(var(--hue-color), 12%, 90%);
-    --scroll-thumb-color: hsl(var(--hue-color), 50%, 75%);
+    --scroll-thumb-color: hsl(var(--hue-color), 50%, 75%); */
+
+    --hue-color: 340;
+    --body-color: rgb(236, 210, 217);
+    --first-color:rgb(163, 51, 81);
+    --light-first-color: rgba(163, 51, 81, .5);
+    --hover-color:rgb(167, 25, 63);
+    --second-color:#54424b;
+    --light-second-color:rgba(222, 105, 130, .5);
+    --text-color: rgb(20, 42, 39);
+    --footer-color: #fac4d3;
+    --correct-color: hsla(129, 42%, 55%, 1);
+    --incorrect-color: rgb(199, 65, 65);
+    --game-prefix-color:#5c031b;
+    --game-hud-text: #b02449;
+
+    --first-color:#d81159 ;
+    --light-first-color: rgba(163, 51, 81, .5);
+    --hover-color:rgb(167, 25, 63);
+    --second-color:rgb(163, 51, 81);
+    --light-second-color:rgba(222, 105, 130, .5);
+    --text-color: #02394a;
+    --white-color:#fff;
 
 
     /* font-family */
@@ -79,10 +100,11 @@ body{
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 h1, h2, h3{
-    color:var(--title-color);
+    color:var(--first-color);
     font-weight: var(--font-semi-bold);
     font-family: var(--title-font);
 }

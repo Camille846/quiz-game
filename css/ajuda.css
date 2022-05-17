@@ -11,7 +11,7 @@
     justify-content: center;
 }
 .ajuda-content{
-    border: 1px solid #a33351;
+    border: 1px solid var(--first-color);
     border-radius: 15px;
     margin-top: var(--mb-1);
     display: flex;

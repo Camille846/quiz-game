@@ -14,7 +14,7 @@
     align-items: center;
     margin-bottom: var(--mb-2);
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid var(--first-color);
     border-radius: 15px;
     padding: 1rem;
 }
@@ -24,7 +24,7 @@
 }
 
 .card-button{
-    background-color: #a84f67;
+    background-color: var(--first-color);
     border-radius: 15px;
     padding: .5rem 0;
     width: 100%;
@@ -39,7 +39,7 @@
 }
 
 .card-button:hover{
-    background-color: #a33351;
+    background-color: var(--hover-color);
 }
 
 .card-button:hover .more-btn{
@@ -52,6 +52,18 @@
         display: grid;
         grid-template-columns:repeat(4,1fr);
         gap:1rem;
+    }
+
+    .metodo_card .card-item:nth-child(9){
+        grid-column: 2;
+    }
+}
+
+@media screen and (max-width:350px){
+    .metodo_card{
+        display: flex;
+        flex-direction: column;
+        row-gap:1rem;
     }
 
     .metodo_card .card-item:nth-child(9){

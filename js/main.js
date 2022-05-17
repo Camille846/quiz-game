@@ -31,6 +31,16 @@ function linkAction(){
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+// CHANGE BACKGROUND HEADER
+function scrollHeader(){
+    const header = document.getElementById('header');
+    // When scroll is greater than 100 viewport height, add the scroll-header class
+    if(this.scrollY >= 100) header.classList.add('scroll-header');
+    else header.classList.remove('scroll-header')
+}
+
+window.addEventListener('scroll', scrollHeader);
+
 const moreBtnOne = document.getElementById('m01');
 const moreBtnTwo = document.getElementById('m02'); 
 const moreBtnThree = document.getElementById('m03');
@@ -89,7 +99,7 @@ const sr = ScrollReveal({
     // reset: true,
 })
 
-sr.reveal('.home-title, .home-card, .metodo-title, .metodo_card, .direitos-title, .direitos-subtitle, .card-content, .ajuda-title, .ajuda-box, .footer',{
+sr.reveal('.home__data-subtitle, .home__data-title, .inicio-title, .inicio-card, .metodo-title, .metodo_card, .direitos-title, .direitos-subtitle, .card-content, .ajuda-title, .ajuda-box, .footer',{
     origin:'top',
     interval: .500,
 })
