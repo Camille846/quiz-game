@@ -23,14 +23,14 @@ let questions = [
         choice1: "Implantes",
         choice2: "Injetáveis ",
         choice3: "D.I.U",
-        choice4: "Preservativos e pílulas",
+        choice4: "Preservativos e pílulas contraceptivas orais",
         answer: 4
     },
     {
         question: "São princípios éticos orientadores das práticas profissionais no planejamento familiar, exceto:",
         choice1: "Respeito aos direitos e á autonomia sexual e reprodutiva de todos os sujeitos",
         choice2: "Promoção da iniquidade de gênero, equidade ético-racial e da injustiça social",
-        choice3: "Diversidade e respeito às diferenças culturais, de estilo de vida, de orientação sexual e outras",
+        choice3: "Diversidade e respeito às diferenças culturais, de estilo de vida e de orientação sexual",
         choice4: "Integralidade e humanização como princípios das práticas de saúde e organização dos processos de trabalho",
         answer: 2
     },
