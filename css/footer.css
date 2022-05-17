@@ -67,6 +67,19 @@
     color: var(--hover-color);
 }
 
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: .3rem;
+}
+
+.mail-icon{
+    font-size: 1.5rem;
+    color: var(--first-color);
+}
+
 @media screen and (min-width:768px){
     .footer__container{
         column-gap: 5rem;
